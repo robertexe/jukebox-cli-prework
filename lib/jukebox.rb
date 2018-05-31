@@ -40,8 +40,8 @@ def play(songs)
   songs.each do |song_name|
     if song_input == song_name
       puts "Playing #{song_input}"
-    elsif songs.find_index(song_input+1)
-      puts "Playing #{songs[song_input+1]}"
+    elsif songs.find_index(song_input)
+      puts "Playing #{songs[song_input]}"
     else
       puts "Invalid input, please try again"
     end
