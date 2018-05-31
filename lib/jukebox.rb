@@ -38,6 +38,10 @@ def play(songs)
   puts "Please enter a song name or number:"
   song_input = gets.chomp
   if song_input.class == String
-    puts "hello"
+    songs.each do |song|
+      if song == song_input
+        puts "Playing #{song}"
+      end
+    end
   end
 end
