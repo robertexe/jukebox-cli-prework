@@ -30,6 +30,6 @@ end
 
 def list(songs)
   songs.each_with_index do |song_name, index|
-    puts "#{index+1}. song_name"
+    puts "#{index+1}. #{song_name}"
   end
 end
