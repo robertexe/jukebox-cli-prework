@@ -37,11 +37,18 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   song_input = gets.chomp
-  songs.each do |song|
-    if song == song_input or song == songs[(song_input.to_i)+1]
-      return "Playing #{song}"
+
+  i = 0;
+  while i<songs.length do
+    if song_input == songs[i]
+      puts "Playing #{songs[i]}"
+      break
+    elsif songs[i] == songs[(song_input.to_i)-1]
+    puts "Playing #{songs[i]}"
+      break
     else
-      return "Invalid input, please try again"
+      puts "Invalid input, please try again"
     end
+    i+=1
   end
 end
