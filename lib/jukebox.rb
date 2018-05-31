@@ -65,7 +65,6 @@ def run(songs)
       play(songs)
     end
     break if user_command = "exit"
-    end
   end
   exit_jukebox
 end
