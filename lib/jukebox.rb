@@ -37,11 +37,5 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   song_input = gets.chomp
-  songs.each do |song_name|
-    if song_input == song_name
-      puts "Playing #{song_input}"
-    else
-      puts "Invalid input, please try again"
-    end
-  end
+  return song_input
 end
