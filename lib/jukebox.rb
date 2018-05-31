@@ -53,5 +53,18 @@ def exit_jukebox
 end
 
 def run
-  
+  help
+  puts "Please enter a command:"
+  user_command = gets.chomp
+
+  case user_command
+  when "list"
+    list
+  when "play"
+    play
+  when "help"
+    help
+  when "exit"
+    exit_jukebox
+  end
 end
