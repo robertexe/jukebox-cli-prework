@@ -39,7 +39,7 @@ def play(songs)
   song_input = gets.chomp
   songs.each do |song_title|
     if song_title == song_input or song_title == songs[song_input.to_i+1]
-      return puts "Playing #{song_title}"
+      return "Playing #{song_title}"
     else
       puts "Invalid input, please try again"
     end
