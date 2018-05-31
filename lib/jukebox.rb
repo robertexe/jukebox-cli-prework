@@ -43,5 +43,9 @@ def play(songs)
         puts "Playing #{song}"
       end
     end
+  elsif song_input.class == Integer
+    puts "Playing #{songs[song_input+1]}"
+  else
+    puts "Invalid input, please try again"
   end
 end
