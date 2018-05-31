@@ -39,16 +39,13 @@ def play(songs)
   song_input = gets.chomp
 
   i = 0;
-  while i<songs.length do
-    if song_input == songs[i]
-      puts "Playing #{songs[i]}"
-      break
-    elsif songs[i] == songs[(song_input.to_i)-1]
-    puts "Playing #{songs[i]}"
-      break
+  songs.each_with_index do |song , index|
+    if song == song_input
+      puts "Playing #{song}"
+    elsif song == songs[(song_input.to_i)-1]
+      puts "Playing #{song}"
     else
       puts "Invalid input, please try again"
     end
-    i+=1
   end
 end
